@@ -1,5 +1,6 @@
 <p>dnd works!</p>
-<button (click)="viewinfo()">Veure Dades</button>
+<button (click)="viewInfo()">Veure Dades</button>
+<img src="{{url+image}}" style="height: 100px;">
 <table>
     <thead>
       <tr>
@@ -13,9 +14,9 @@
     <tbody>
         <tr *ngFor="let monster of monsters">
             <td>{{ monster.name }}</td>
-            <!-- <td>{{ alumne.email }}</td>
-            <td>{{ alumne.nom }}</td>
-            <td>{{ alumne.curriculum }}</td>
+            <td><button (click)="getImage(monster.index)">O</button><input type="checkbox" (click)="viewInfo()"></td>
+            <!-- <td>{{ monster. }}</td> -->
+            <!-- <td>{{ alumne.curriculum }}</td>
             <td>{{ alumne.pais }}</td> -->
           </tr>
     </tbody>

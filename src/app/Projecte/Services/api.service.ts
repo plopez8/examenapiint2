@@ -10,6 +10,10 @@ export class ApiService {
 
   getMonsters(): any {
     return this.http.get('https://www.dnd5eapi.co/api/monsters');
-  } 
+  }
+  
+  getImage(nom: String): any {
+    return this.http.get('https://www.dnd5eapi.co/api/monsters/'+nom);
+  }
 
 }

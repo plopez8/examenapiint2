@@ -9,7 +9,8 @@ import { ApiService } from '../../Services/api.service';
 })
 export class DndComponent {
   monsters = Array<any>();
-
+  url = "https://www.dnd5eapi.co";
+  image = String;
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -21,9 +22,20 @@ export class DndComponent {
       this.monsters = data.results;
     });
   }
-  
 
-  viewinfo(){
-    console.log("viewinfo");
+  getImage(name: String){
+    this.api.getImage(name).subscribe((data: any) => {
+      if(data.image == null){
+        console.log("No te imatge");
+      }else{
+              this.image = data.image;
+      }
+
+    });
   }
+
+  viewInfo(){
+    console.log("hola");
+  }
+
 }
