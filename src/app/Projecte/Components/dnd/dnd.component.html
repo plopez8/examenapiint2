@@ -1,0 +1,22 @@
+<p>dnd works!</p>
+<button (click)="viewinfo()">Veure Dades</button>
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Accio</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Subtype</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let monster of monsters">
+            <td>{{ monster.name }}</td>
+            <!-- <td>{{ alumne.email }}</td>
+            <td>{{ alumne.nom }}</td>
+            <td>{{ alumne.curriculum }}</td>
+            <td>{{ alumne.pais }}</td> -->
+          </tr>
+    </tbody>
+  </table>
